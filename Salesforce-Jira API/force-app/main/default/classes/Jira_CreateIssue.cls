@@ -1,4 +1,4 @@
-public class Jira_Invoke {
+public class Jira_CreateIssue {
 
     @InvocableMethod(label='Create Issue on JIRA')
     public static void methodName(List<Id> ids) {
@@ -18,27 +18,27 @@ public class Jira_Invoke {
         class cls_update {
         }
         class cls_fields {
-            public String summary;	//Testing API
+            public String summary;	
             public cls_issuetype issuetype;
             public cls_project project;
             public cls_description description;
-            public String duedate;	//2022-12-30
+            public String duedate;	
         }
         class cls_issuetype {
-            public String id;	//10112
+            public String id;	
         }
         class cls_project {
-            public String id;	//10039
+            public String id;	
         }
         class cls_description {
-            public String type;	//doc
-            public Integer version;	//1
+            public String type;	
+            public Integer version;	
             public cls_content[] content;
         }
         class cls_content {
             public cls_content[] content;
-            public String text;	//Order entry fails when selecting supplier.
-            public String type;	//text
+            public String text;	
+            public String type;	
         }
         public static ModelCreateIssue parse(String json){
             return (ModelCreateIssue) System.JSON.deserialize(json, ModelCreateIssue.class);
