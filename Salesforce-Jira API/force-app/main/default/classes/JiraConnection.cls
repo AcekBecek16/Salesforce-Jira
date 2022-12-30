@@ -1,5 +1,5 @@
 public class JiraConnection {
-    public static string JiraConnection(String endpoint, String body, String method) {
+    public string JiraConnection(String endpoint, String body, String method) {
 
         Http http = new Http();
         HttpRequest request = new HttpRequest();
@@ -10,12 +10,13 @@ public class JiraConnection {
 
         request.setHeader('Content-Type', 'application/json');
         request.setEndpoint(System.label.JIRA_URL+''+endpoint);
-        request.setHeader('Authorization', 'Basic '+auth);
+        request.setHeader('Authorization', 'Basic '+EncodingUtil.base64Encode(auth));
         request.setMethod(method);
         request.setBody(body);
 
         HttpResponse response = http.send(request);
         System.debug(response.getBody());
+        
         return response.getBody();
         
 

@@ -1,9 +1,9 @@
 public class Jira_M_CreateIssue {
     
-        public cls_update update_z;
+        // public cls_update update_z;
         public cls_fields fields;
-        public class cls_update {
-        }
+        // public class cls_update {
+        // }
         public class cls_fields {
             public String summary;	
             public cls_issuetype issuetype;
@@ -23,9 +23,12 @@ public class Jira_M_CreateIssue {
             public cls_content[] content;
         }
         public class cls_content {
-            public cls_content[] content;
-            public String text;	
+            public content2[] content;
             public String type;	
+        }
+        public class content2{  
+            public String type;	
+            public String text;	
         }
         public static Jira_M_CreateIssue parse(String json){
             return (Jira_M_CreateIssue) System.JSON.deserialize(json, Jira_M_CreateIssue.class);

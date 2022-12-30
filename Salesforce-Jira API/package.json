@@ -23,7 +23,7 @@
     "@salesforce/eslint-plugin-lightning": "^1.0.0",
     "@salesforce/sfdx-lwc-jest": "^1.1.0",
     "eslint": "^8.11.0",
-    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-import": "^2.24.1",
     "eslint-plugin-jest": "^26.1.2",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.7",
@@ -37,5 +37,8 @@
     "**/{aura,lwc}/**": [
       "eslint"
     ]
+  },
+  "dependencies": {
+    "htmltoadf": "^0.1.6"
   }
 }
